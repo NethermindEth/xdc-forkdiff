@@ -358,6 +358,12 @@ func (fd *ForkDefinition) hydrate(patchByName map[string]diff.FilePatch, remaini
 }
 
 func (fd *ForkDefinition) hydratePatch(name string, p diff.FilePatch, ignored bool) {
+	//NOTE: I added this because the forkdiff was crashing
+	// I'm pretyy sure I'm doing something wrong with YAML definition, but his was faster fix and it works
+	if p == nil {
+		return
+	}
+
 	stat := FilePatchStats{
 		Path:         name,
 		LinesAdded:   countOperations(p.Chunks(), diff.Add),

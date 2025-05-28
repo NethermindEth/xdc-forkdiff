@@ -1,3 +1,14 @@
+# Usage example:
+1. Clone go-ethereum repo
+2. Clone XDPoSChain repo
+3. Run `go build`
+4. Run:
+
+
+Note: Assumes that the repos are cloned in the same parent directory.
+```Bash
+ ./forkdiff -repo ../XDPoSChain/ -upstream-repo ../go-ethereum/
+```
 # forkdiff
 
 Forkdiff is a simple CLI tool to diff a git fork and its base,

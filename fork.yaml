@@ -1,0 +1,354 @@
+title: "XDC Fork Diff" # Define the HTML page title
+footer: | # define the footer with markdown
+  XDC fork Diff
+base:
+  name: ethereum/go-ethereum
+  url: https://github.com/ethereum/go-ethereum
+  ref: refs/heads/master
+fork:
+  name: xdc
+  url: https://github.com/XinFinOrg/XDPoSChain 
+  ref: refs/heads/dev-upgrade
+def:
+  title: "XDC"
+  sub:
+    - title: "XDC"
+      description: "Shows XDC specific changes"
+      sub:
+        - title: "XDC Exchange"
+          description: ""
+          globs:
+            - "XDCx/**"
+        - title: "XDC Lending"
+          description: ""
+          globs:
+            - "XDCxlending/**"
+        - title: "XDC DAO"
+          description: ""
+          globs:
+            - "XDCxDAO/**"
+        - title: "XDC Consensus"
+          description: ""
+          globs:
+            - "consensus/XDPoS/**"
+        - title: "XDC Contracts"
+          description: ""
+          globs:
+            - "contracts/**"
+        - title: "XDC Consensus ETH Handler"
+          description: ""
+          globs:
+            - "eth/bft/**"
+
+        - title: "Binary Merkle tree"
+          description: ""
+          globs:
+            - "bmt/**"
+
+        - title: "CMD"
+          description: ""
+          globs:
+            - "cmd/XDC/**"
+
+    - title: "accounts"
+      description: "accounts"
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "accounts/**"
+
+
+    - title: "internal"
+      description: "internal"
+      sub:
+        - title: "ETHApi"
+          description: ""
+          globs:
+            - "internal/ethapi/**"
+        - title: "Other"
+          description: ""
+          globs:
+            - "internal/**"
+
+    - title: "ethdb"
+      description: "ethdb"
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "ethdb/**"
+
+    - title: "cmd"
+      description: This shows modifications to cmd files.
+      sub:
+        - title: "Files"
+          description: "These changes are for registering our RPC APIs and custom genesis settings."
+          globs:
+            - "cmd/**"
+
+    - title: "consensus"
+      description: "This shows modifications to consensus files."
+      sub:
+        - title: "Files"
+          description: "Consensus engine"
+          globs:
+            - "consensus/**"
+
+    - title: "core"
+      description: This shows modifications to core files.
+      sub:
+        - title: "asm"
+          globs:
+            - "core/asm/**"
+        - title: "bloombits"
+          globs:
+            - "core/bloombits/**"
+        - title: "rawdb"
+          globs:
+            - "core/rawdb/**"
+        - title: "state"
+          description: "core/state"
+          sub:
+            - title: "snapshot"
+              globs:
+                - "core/state/snapshot/**"
+            - title: "Other"
+              globs:
+                - "core/state/**"
+        - title: "types"
+          globs:
+            - "core/types/**"
+        - title: "txpool"
+          globs:
+            - "core/txpool/**"
+        - title: "vm"
+          globs:
+            - "core/vm/**"
+        - title: "Other"
+          globs:
+            - "core/**"
+
+    - title: "eth"
+      description: This shows changes to eth files.
+      sub:
+        - title: "catalyst"
+          description: 
+          globs:
+            - "eth/catalyst/**"
+        - title: "downloader"
+          description: 
+          globs:
+            - "eth/downloader/**"
+        - title: "fetcher"
+          description: 
+          globs:
+            - "eth/fetcher/**"
+        - title: "protocols"
+          description: 
+          globs:
+            - "eth/protocols/**"
+        - title: "filters"
+          description: 
+          globs:
+            - "eth/filters/**"
+        - title: "tracers"
+          description: 
+          globs:
+            - "eth/tracers/**"
+        - title: "Other"
+          description: 
+          globs:
+            - "eth/**"
+
+    - title: "ethclient"
+      description: This shows changes to ethclient files.
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "ethclient/**"
+    - title: "miner"
+      description: "This shows changes to miner files."
+      sub:
+        - title: "Files"
+          description: "This adds ARB-specific miner changes."
+          globs:
+            - "miner/**"
+
+    - title: "node"
+      description: "This shows changes to node files"
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "node/**"
+
+    - title: "p2p"
+      description: "This shows changes to p2p files"
+      sub:
+        - title: "discover"
+          globs:
+            - "p2p/discover/**"
+        - title: "discv5"
+          globs:
+            - "p2p/discv5/**"
+        - title: "dnsdisc"
+          globs:
+            - "p2p/dnsdisc/**"
+        - title: "enode"
+          globs:
+            - "p2p/enode/**"
+        - title: "nat"
+          globs:
+            - "p2p/nat/**"
+        - title: "netutil"
+          globs:
+            - "p2p/netutil/**"
+        - title: "simulations"
+          globs:
+            - "p2p/simulations/**"
+        - title: "Other"
+          globs:
+            - "p2p/**"
+
+    - title: "params"
+      description: "This shows changes to params files."
+      sub:
+        - title: "Files"
+          description: "This adds ARB config values such as chain IDs and Network IDs."
+          globs:
+            - "params/**"
+
+    - title: "rlp"
+      description: "This shows changes to rlp files"
+      sub:
+        - title: "Files"
+          globs:
+            - "rlp/**"
+
+    - title: "rpc"
+      description: "This shows changes to the rpc files"
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "rpc/**"
+
+    - title: "common"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "common/**"
+
+    - title: "trie"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "trie/**"
+
+    - title: "triedb"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "triedb/**"
+
+    - title: "crypto"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "crypto/**"
+
+    - title: "metrics"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "metrics/**"
+
+    - title: "event"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "event/**"
+
+    - title: "beacon"
+      description: ""
+      sub:
+        - title: "Files"
+          description: ""
+          globs:
+            - "beacon/**"
+# files can be ignored globally, these will be listed in a separate grayed-out section,
+# and do not count towards the total line count.
+ignore:
+  - "signer/**"
+  - "graphql/**"
+  - "cicd/**"
+  - "build/**"
+  - "assets/**"
+  - "tests/**"
+  - "cmd/clef/**"
+  - "cmd/devp2p/**"
+  - "cmd/workoad/**"
+  - "cmd/evm/testdata/**"
+  - "cmd/geth/testdata/**"
+  - "Dockerfile*"
+  - "Makefile"
+  - ".*"
+  - ".github/*"
+  - ".github/*/*"
+  - "*.sh"
+  - "*/*.sh"
+  - "*/*/*.sh"
+  - "*/*/*/*.sh"
+  - "*/*/*/*/*.sh"
+  - "*/*/*/*/*/*.sh"
+  - "*/*/*/*/*/*/*.sh"
+  - "*.json"
+  - "*/*.json"
+  - "*/*/*.json"
+  - "*/*/*/*.json"
+  - "*/*/*/*/*.json"
+  - "*/*/*/*/*/*.json"
+  - "*/*/*/*/*/*/*.json"
+  - "*.pb.go"
+  - "*/*.pb.go"
+  - "*/*/*.pb.go"
+  - "*/*/*/*.pb.go"
+  - "*/*/*/*/*.pb.go"
+  - "*/*/*/*/*/*.pb.go"
+  - "*/*/*/*/*/*/*.pb.go"
+  - "*/*/*/*/*/*/*/*.pb.go"
+  - "*.sum"
+  - "*/*.sum"
+  - "*/*/*.sum"
+  - "*/*/*/*.sum"
+  - "*/*/*/*/*.sum"
+  - "*/*/*/*/*/*.sum"
+  - "*/*/*/*/*/*/*.sum"
+  - "*/*/*/*/*/*/*/*.sum"
+  - "*/*/*/*/*/*/*/*/*.sum"
+  - "*.mod"
+  - "*/*.mod"
+  - "*/*/*.mod"
+  - "*/*/*/*.mod"
+  - "*/*/*/*/*.mod"
+  - "*/*/*/*/*/*.mod"
+  - "*/*/*/*/*/*/*.mod"
+  - "*/*/*/*/*/*/*/*.mod"
+  - "*/*/*/*/*/*/*/*/*.mod"
+  - "*.md"
+# *.pb.go
+# *.sum
